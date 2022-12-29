@@ -11,9 +11,7 @@
     "upstream": {
         "license": "AGPL-3.0",
         "website": "https://libremdb.iket.me/",
-        "demo": "https://demo.example.com",
-        "admindoc": "https://yunohost.org/packaging_apps",
-        "userdoc": "https://yunohost.org/apps",
+        "demo": "https://libremdb.iket.me/about",
         "code": "https://github.com/zyachel/libremdb"
     },
     "license": "AGPL-3.0",

@@ -9,9 +9,6 @@
 # nodejs version
 nodejs_version=16
 
-# dependencies used by the app (must be on a single line)
-#pkg_dependencies="deb1 deb2 $php_dependencies"
-
 #=================================================
 # PERSONAL HELPERS
 #=================================================
