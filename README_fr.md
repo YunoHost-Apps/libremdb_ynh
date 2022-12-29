@@ -28,7 +28,7 @@ A free & open source IMDb front-end.
 
 **Version incluse :** 2.2.2~ynh1
 
-**Démo :** https://demo.example.com
+**Démo :** https://libremdb.iket.me/about
 
 ## Captures d'écran
 
@@ -52,8 +52,6 @@ A free & open source IMDb front-end.
 ## Documentations et ressources
 
 * Site officiel de l'app : <https://libremdb.iket.me/>
-* Documentation officielle utilisateur : <https://yunohost.org/apps>
-* Documentation officielle de l'admin : <https://yunohost.org/packaging_apps>
 * Dépôt de code officiel de l'app : <https://github.com/zyachel/libremdb>
 * Documentation YunoHost pour cette app : <https://yunohost.org/app_libremdb>
 * Signaler un bug : <https://github.com/YunoHost-Apps/libremdb_ynh/issues>
