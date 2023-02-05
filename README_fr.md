@@ -5,15 +5,15 @@ It shall NOT be edited by hand.
 
 # Libremdb pour YunoHost
 
-[![Niveau d'intégration](https://dash.yunohost.org/integration/libremdb.svg)](https://dash.yunohost.org/appci/app/libremdb) ![Statut du fonctionnement](https://ci-apps.yunohost.org/ci/badges/libremdb.status.svg) ![Statut de maintenance](https://ci-apps.yunohost.org/ci/badges/libremdb.maintain.svg)  
+[![Niveau d’intégration](https://dash.yunohost.org/integration/libremdb.svg)](https://dash.yunohost.org/appci/app/libremdb) ![Statut du fonctionnement](https://ci-apps.yunohost.org/ci/badges/libremdb.status.svg) ![Statut de maintenance](https://ci-apps.yunohost.org/ci/badges/libremdb.maintain.svg)
 [![Installer Libremdb avec YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=libremdb)
 
 *[Read this readme in english.](./README.md)*
 
-> *Ce package vous permet d'installer Libremdb rapidement et simplement sur un serveur YunoHost.
-Si vous n'avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) pour savoir comment l'installer et en profiter.*
+> *Ce package vous permet d’installer Libremdb rapidement et simplement sur un serveur YunoHost.
+Si vous n’avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) pour savoir comment l’installer et en profiter.*
 
-## Vue d'ensemble
+## Vue d’ensemble
 
 A free & open source IMDb front-end.
 
@@ -30,14 +30,14 @@ A free & open source IMDb front-end.
 
 **Démo :** https://libremdb.iket.me/about
 
-## Captures d'écran
+## Captures d’écran
 
-![Capture d'écran de Libremdb](./doc/screenshots/screenshot.png)
+![Capture d’écran de Libremdb](./doc/screenshots/screenshot.png)
 
 ## Documentations et ressources
 
-* Site officiel de l'app : <https://libremdb.iket.me/>
-* Dépôt de code officiel de l'app : <https://github.com/zyachel/libremdb>
+* Site officiel de l’app : <https://libremdb.iket.me/>
+* Dépôt de code officiel de l’app : <https://github.com/zyachel/libremdb>
 * Documentation YunoHost pour cette app : <https://yunohost.org/app_libremdb>
 * Signaler un bug : <https://github.com/YunoHost-Apps/libremdb_ynh/issues>
 
@@ -53,4 +53,4 @@ ou
 sudo yunohost app upgrade libremdb -u https://github.com/YunoHost-Apps/libremdb_ynh/tree/testing --debug
 ```
 
-**Plus d'infos sur le packaging d'applications :** <https://yunohost.org/packaging_apps>
+**Plus d’infos sur le packaging d’applications :** <https://yunohost.org/packaging_apps>
