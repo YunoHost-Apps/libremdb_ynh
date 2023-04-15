@@ -6,6 +6,7 @@ It shall NOT be edited by hand.
 # Libremdb for YunoHost
 
 [![Integration level](https://dash.yunohost.org/integration/libremdb.svg)](https://dash.yunohost.org/appci/app/libremdb) ![Working status](https://ci-apps.yunohost.org/ci/badges/libremdb.status.svg) ![Maintenance status](https://ci-apps.yunohost.org/ci/badges/libremdb.maintain.svg)
+
 [![Install Libremdb with YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=libremdb)
 
 *[Lire ce readme en français.](./README_fr.md)*
