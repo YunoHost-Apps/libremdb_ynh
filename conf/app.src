@@ -1,7 +1,0 @@
-SOURCE_URL=https://github.com/zyachel/libremdb/archive/refs/tags/v2.2.2.tar.gz
-SOURCE_SUM=0f58b9d9f1a0a9787352c3c358806d3729db611888ae23e166e870cb049ca151
-SOURCE_SUM_PRG=sha256sum
-SOURCE_FORMAT=tar.gz
-SOURCE_IN_SUBDIR=true
-SOURCE_FILENAME=
-SOURCE_EXTRACT=true
