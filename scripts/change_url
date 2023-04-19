@@ -101,6 +101,16 @@ then
 fi
 
 #=================================================
+# CHANGE APP CONFIGURATION
+#=================================================
+ynh_script_progression --message="Changing app configuration file..." --weight=1
+
+ynh_add_config --template="../conf/.env.local.example" --destination="$final_path/.env.local"
+
+chmod 400 "$final_path/.env.local"
+chown $app:$app "$final_path/.env.local"
+
+#=================================================
 # GENERIC FINALISATION
 #=================================================
 # START SYSTEMD SERVICE
