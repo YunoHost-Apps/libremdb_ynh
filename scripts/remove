@@ -7,6 +7,7 @@
 #=================================================
 
 source _common.sh
+source ynh_redis
 source /usr/share/yunohost/helpers
 
 #=================================================
@@ -19,6 +20,7 @@ app=$YNH_APP_INSTANCE_NAME
 domain=$(ynh_app_setting_get --app=$app --key=domain)
 port=$(ynh_app_setting_get --app=$app --key=port)
 final_path=$(ynh_app_setting_get --app=$app --key=final_path)
+redis_db=$(ynh_app_setting_get --app=$app --key=redis_db)
 
 #=================================================
 # STANDARD REMOVE
@@ -56,6 +58,13 @@ ynh_script_progression --message="Removing NGINX web server configuration..." --
 
 # Remove the dedicated NGINX config
 ynh_remove_nginx_config
+
+#=================================================
+# REMOVE THE REDIS DATABASE
+#=================================================
+ynh_script_progression --message="Removing the redis database..."
+
+ynh_redis_remove_db "$redis_db"
 
 #=================================================
 # REMOVE DEPENDENCIES
