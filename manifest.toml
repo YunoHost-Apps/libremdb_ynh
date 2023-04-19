@@ -38,7 +38,7 @@ ram.runtime = "50M"
         [resources.sources.main]
         url = "https://github.com/zyachel/libremdb/archive/refs/tags/v3.0.0.tar.gz"
         sha256 = "8519c55ed0f74189270c3d09e85f2509301bb66e3749503e4b015c90142a1a8a"
-
+        autoupdate.strategy = "latest_github_tag"
 
     [resources.system_user]
 
