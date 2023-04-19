@@ -21,8 +21,6 @@ nodejs_version=16
 # FUTURE OFFICIAL HELPERS
 #=================================================
 
-#!/bin/bash
-
 # get the first available redis database
 #
 # usage: ynh_redis_get_free_db
@@ -51,9 +49,6 @@ ynh_redis_get_free_db() {
 	echo "$db"
 }
 
-# Create a master password and set up global settings
-# Please always call this script in install and restore scripts
-#
 # usage: ynh_redis_remove_db database
 # | arg: database - the database to erase
 ynh_redis_remove_db() {
