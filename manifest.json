@@ -24,7 +24,8 @@
     },
     "multi_instance": true,
     "services": [
-        "nginx"
+        "nginx",
+	"redis-server"
     ],
     "arguments": {
         "install": [
