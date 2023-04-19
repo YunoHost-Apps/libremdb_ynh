@@ -105,6 +105,8 @@ fi
 #=================================================
 ynh_script_progression --message="Changing app configuration file..." --weight=1
 
+domain="$old_domain"
+
 ynh_add_config --template="../conf/.env.local.example" --destination="$final_path/.env.local"
 
 chmod 400 "$final_path/.env.local"
