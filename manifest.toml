@@ -16,7 +16,7 @@ demo = "https://libremdb.iket.me/about"
 code = "https://github.com/zyachel/libremdb"
 
 [integration]
-yunohost = ">= 11.1.17"
+yunohost = ">= 11.2"
 architectures = "all"
 multi_instance = true
 ldap = false
@@ -28,7 +28,6 @@ ram.runtime = "50M"
 [install]
     [install.domain]
     type = "domain"
-    full_domain = true
 
     [install.init_main_permission]
     type = "group"
@@ -52,7 +51,6 @@ ram.runtime = "50M"
     [resources.apt]
     packages = ""
 
-    # (this part is optional and corresponds to the legacy ynh_install_extra_app_dependencies helper)
     extras.yarn.repo = "deb https://dl.yarnpkg.com/debian/ stable main"
     extras.yarn.key = "https://dl.yarnpkg.com/debian/pubkey.gpg"
     extras.yarn.packages = "yarn"
