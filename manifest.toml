@@ -5,7 +5,7 @@ name = "Libremdb"
 description.en = "Free & open source IMDb front-end"
 description.fr = "Frontal IMDb gratuit et open source"
 
-version = "3.0.0~ynh1"
+version = "3.1.0~ynh1"
 
 maintainers = []
 
@@ -16,7 +16,7 @@ demo = "https://libremdb.iket.me/about"
 code = "https://github.com/zyachel/libremdb"
 
 [integration]
-yunohost = ">= 11.1.17"
+yunohost = ">= 11.2"
 architectures = "all"
 multi_instance = true
 ldap = false
@@ -28,7 +28,6 @@ ram.runtime = "50M"
 [install]
     [install.domain]
     type = "domain"
-    full_domain = true
 
     [install.init_main_permission]
     type = "group"
@@ -36,8 +35,8 @@ ram.runtime = "50M"
 
 [resources]
         [resources.sources.main]
-        url = "https://github.com/zyachel/libremdb/archive/refs/tags/v3.0.0.tar.gz"
-        sha256 = "8519c55ed0f74189270c3d09e85f2509301bb66e3749503e4b015c90142a1a8a"
+        url = "https://github.com/zyachel/libremdb/archive/refs/tags/v3.1.0.tar.gz"
+        sha256 = "2af323505e30a8d053a59fac4d3e0693b131d1beba475c61844fe62cccffa325"
         autoupdate.strategy = "latest_github_tag"
 
     [resources.ports]
@@ -52,7 +51,6 @@ ram.runtime = "50M"
     [resources.apt]
     packages = ""
 
-    # (this part is optional and corresponds to the legacy ynh_install_extra_app_dependencies helper)
     extras.yarn.repo = "deb https://dl.yarnpkg.com/debian/ stable main"
     extras.yarn.key = "https://dl.yarnpkg.com/debian/pubkey.gpg"
     extras.yarn.packages = "yarn"
