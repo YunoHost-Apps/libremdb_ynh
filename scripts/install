@@ -44,17 +44,6 @@ redis_db=$(ynh_redis_get_free_db)
 ynh_app_setting_set --app="$app" --key=redis_db --value="$redis_db"
 
 #=================================================
-# INSTALL LIBREMDB
-#=================================================
-ynh_script_progression --message="Building the app..." --weight=20
-
-pushd $install_dir
- 	ynh_use_nodejs
-	ynh_exec_warn_less sudo -u $app env $ynh_node_load_PATH yarn install
-	ynh_exec_warn_less sudo -u $app env $ynh_node_load_PATH NODE_ENV=production yarn build
-popd
-
-#=================================================
 # ADD A CONFIGURATION
 #=================================================
 ynh_script_progression --message="Adding a configuration file..." --weight=1
@@ -63,6 +52,20 @@ ynh_add_config --template="../conf/.env.local.example" --destination="$install_d
 
 chmod 400 "$install_dir/.env.local"
 chown $app:$app "$install_dir/.env.local"
+
+
+#=================================================
+# INSTALL LIBREMDB
+#=================================================
+ynh_script_progression --message="Building the app..." --weight=20
+
+pushd $install_dir
+	ynh_use_nodejs
+	corepack enable
+	corepack prepare pnpm@latest --activate
+	ynh_exec_warn_less ynh_exec_as $app env $ynh_node_load_PATH pnpm install
+	ynh_exec_warn_less ynh_exec_as $app env $ynh_node_load_PATH NODE_ENV=production pnpm build
+popd
 
 #=================================================
 # SETUP SYSTEMD
