@@ -9,7 +9,7 @@ It shall NOT be edited by hand.
 
 [![Install Libremdb with YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=libremdb)
 
-*[Read this README is other languages.](./ALL_README.md)*
+*[Read this README in other languages.](./ALL_README.md)*
 
 > *This package allows you to install Libremdb quickly and simply on a YunoHost server.*  
 > *If you don't have YunoHost, please consult [the guide](https://yunohost.org/install) to learn how to install it.*
@@ -27,7 +27,7 @@ A free & open source IMDb front-end.
 
 
 
-**Shipped version:** 3.3.0~ynh1
+**Shipped version:** 3.4.0~ynh1
 
 **Demo:** <https://libremdb.iket.me/about>
 
