@@ -5,7 +5,7 @@ No se debe editar a mano.
 
 # Libremdb para Yunohost
 
-[![Nivel de integración](https://dash.yunohost.org/integration/libremdb.svg)](https://dash.yunohost.org/appci/app/libremdb) ![Estado funcional](https://ci-apps.yunohost.org/ci/badges/libremdb.status.svg) ![Estado En Mantención](https://ci-apps.yunohost.org/ci/badges/libremdb.maintain.svg)
+[![Nivel de integración](https://dash.yunohost.org/integration/libremdb.svg)](https://ci-apps.yunohost.org/ci/apps/libremdb/) ![Estado funcional](https://ci-apps.yunohost.org/ci/badges/libremdb.status.svg) ![Estado En Mantención](https://ci-apps.yunohost.org/ci/badges/libremdb.maintain.svg)
 
 [![Instalar Libremdb con Yunhost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=libremdb)
 
