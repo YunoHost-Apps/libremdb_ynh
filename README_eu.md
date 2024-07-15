@@ -5,7 +5,7 @@ EZ editatu eskuz.
 
 # Libremdb YunoHost-erako
 
-[![Integrazio maila](https://dash.yunohost.org/integration/libremdb.svg)](https://dash.yunohost.org/appci/app/libremdb) ![Funtzionamendu egoera](https://ci-apps.yunohost.org/ci/badges/libremdb.status.svg) ![Mantentze egoera](https://ci-apps.yunohost.org/ci/badges/libremdb.maintain.svg)
+[![Integrazio maila](https://dash.yunohost.org/integration/libremdb.svg)](https://ci-apps.yunohost.org/ci/apps/libremdb/) ![Funtzionamendu egoera](https://ci-apps.yunohost.org/ci/badges/libremdb.status.svg) ![Mantentze egoera](https://ci-apps.yunohost.org/ci/badges/libremdb.maintain.svg)
 
 [![Instalatu Libremdb YunoHost-ekin](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=libremdb)
 
