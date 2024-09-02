@@ -26,32 +26,21 @@ fi
 #=================================================
 ynh_script_progression "Upgrading dependencies..."
 
-# Install Nodejs
 ynh_nodejs_install
 
 #=================================================
 # DOWNLOAD, CHECK AND UNPACK SOURCE
 #=================================================
+ynh_script_progression "Upgrading source files..."
 
-# FIXME: this is still supported but the recommendation is now to *always* re-setup the app sources wether or not the upstream sources changed
-if ynh_app_upstream_version_changed
-then
-	ynh_script_progression "Upgrading source files..."
+ynh_setup_source --dest_dir="$install_dir"
+ pushd $install_dir
 
-	# Download, check integrity, uncompress and patch the source from app.src
-	ynh_setup_source --dest_dir="$install_dir"
-	#REMOVEME? Assuming the install dir is setup using ynh_setup_source, the proper chmod/chowns are now already applied and it shouldn't be necessary to tweak perms | chmod -R o-rwx "$install_dir"
-	#REMOVEME? Assuming the install dir is setup using ynh_setup_source, the proper chmod/chowns are now already applied and it shouldn't be necessary to tweak perms | chown -R $app:www-data "$install_dir"
-  pushd $install_dir
+   ynh_hide_warnings npm install pnpm -g
+   ynh_hide_warnings ynh_exec_as_app pnpm install
+   ynh_hide_warnings ynh_exec_as_app NODE_ENV=production pnpm build
+ popd
 
-    ynh_hide_warnings npm install pnpm -g
-    ynh_hide_warnings ynh_exec_as_app node_load_PATH pnpm install
-    ynh_hide_warnings ynh_exec_as_app node_load_PATH NODE_ENV=production pnpm build
-  popd
-fi
-
-#REMOVEME? Assuming the install dir is setup using ynh_setup_source, the proper chmod/chowns are now already applied and it shouldn't be necessary to tweak perms | chmod -R o-rwx "$install_dir"
-#REMOVEME? Assuming the install dir is setup using ynh_setup_source, the proper chmod/chowns are now already applied and it shouldn't be necessary to tweak perms | chown -R $app:www-data "$install_dir"
 #=================================================
 # ADD A CONFIGURATION
 #=================================================
@@ -59,29 +48,14 @@ ynh_script_progression "Adding $app's configuration..."
 
 ynh_config_add --template=".env.local.example" --destination="$install_dir/.env.local"
 
-#REMOVEME? Assuming the file is setup using ynh_config_add, the proper chmod/chowns are now already applied and it shouldn't be necessary to tweak perms | chmod 400 "$install_dir/.env.local"
-#REMOVEME? Assuming the file is setup using ynh_config_add, the proper chmod/chowns are now already applied and it shouldn't be necessary to tweak perms | chown $app:$app "$install_dir/.env.local"
-
 #=================================================
 # NGINX CONFIGURATION
 #=================================================
 ynh_script_progression "Upgrading NGINX web server configuration..."
 
-# Create a dedicated NGINX config
 ynh_config_add_nginx
 
-#=================================================
-# SETUP SYSTEMD
-#=================================================
-ynh_script_progression "Upgrading systemd configuration..."
-
-# Create a dedicated systemd config
 ynh_config_add_systemd
-
-#=================================================
-# INTEGRATE SERVICE IN YUNOHOST
-#=================================================
-ynh_script_progression "Integrating service in YunoHost..."
 
 yunohost service add $app --description="IMDb front-end" --log="/var/log/$app/$app.log"
 
