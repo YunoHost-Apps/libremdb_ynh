@@ -27,7 +27,7 @@ A free & open source IMDb front-end.
 
 
 
-**Versión actual:** 4.0.0~ynh1
+**Versión actual:** 4.0.0~ynh2
 
 **Demo:** <https://libremdb.iket.me/about>
 
@@ -44,7 +44,7 @@ A free & open source IMDb front-end.
 
 ## Información para desarrolladores
 
-Por favor enviar sus correcciones a la [`branch testing`](https://github.com/YunoHost-Apps/libremdb_ynh/tree/testing
+Por favor enviar sus correcciones a la [rama `testing`](https://github.com/YunoHost-Apps/libremdb_ynh/tree/testing).
 
 Para probar la rama `testing`, sigue asÍ:
 

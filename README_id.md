@@ -27,7 +27,7 @@ A free & open source IMDb front-end.
 
 
 
-**Versi terkirim:** 4.0.0~ynh1
+**Versi terkirim:** 4.0.0~ynh2
 
 **Demo:** <https://libremdb.iket.me/about>
 
