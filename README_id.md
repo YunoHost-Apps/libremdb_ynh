@@ -5,7 +5,9 @@ Ini TIDAK boleh diedit dengan tangan.
 
 # Libremdb untuk YunoHost
 
-[![Tingkat integrasi](https://dash.yunohost.org/integration/libremdb.svg)](https://ci-apps.yunohost.org/ci/apps/libremdb/) ![Status kerja](https://ci-apps.yunohost.org/ci/badges/libremdb.status.svg) ![Status pemeliharaan](https://ci-apps.yunohost.org/ci/badges/libremdb.maintain.svg)
+[![Tingkat integrasi](https://apps.yunohost.org/badge/integration/libremdb)](https://ci-apps.yunohost.org/ci/apps/libremdb/)
+![Status kerja](https://apps.yunohost.org/badge/state/libremdb)
+![Status pemeliharaan](https://apps.yunohost.org/badge/maintained/libremdb)
 
 [![Pasang Libremdb dengan YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=libremdb)
 
@@ -27,7 +29,7 @@ A free & open source IMDb front-end.
 
 
 
-**Versi terkirim:** 4.0.0~ynh2
+**Versi terkirim:** 4.1.0~ynh1
 
 **Demo:** <https://libremdb.iket.me/about>
 
