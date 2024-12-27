@@ -5,7 +5,9 @@ NON debe editarse manualmente.
 
 # Libremdb para YunoHost
 
-[![Nivel de integración](https://dash.yunohost.org/integration/libremdb.svg)](https://ci-apps.yunohost.org/ci/apps/libremdb/) ![Estado de funcionamento](https://ci-apps.yunohost.org/ci/badges/libremdb.status.svg) ![Estado de mantemento](https://ci-apps.yunohost.org/ci/badges/libremdb.maintain.svg)
+[![Nivel de integración](https://apps.yunohost.org/badge/integration/libremdb)](https://ci-apps.yunohost.org/ci/apps/libremdb/)
+![Estado de funcionamento](https://apps.yunohost.org/badge/state/libremdb)
+![Estado de mantemento](https://apps.yunohost.org/badge/maintained/libremdb)
 
 [![Instalar Libremdb con YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=libremdb)
 
@@ -27,7 +29,7 @@ A free & open source IMDb front-end.
 
 
 
-**Versión proporcionada:** 4.0.0~ynh2
+**Versión proporcionada:** 4.1.0~ynh1
 
 **Demo:** <https://libremdb.iket.me/about>
 
