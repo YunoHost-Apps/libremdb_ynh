@@ -33,20 +33,14 @@ ynh_nodejs_install
 #=================================================
 ynh_script_progression "Upgrading source files..."
 
-ynh_setup_source --dest_dir="$install_dir"
- pushd $install_dir
-
-   ynh_hide_warnings npm install pnpm -g
-   ynh_hide_warnings ynh_exec_as_app pnpm install
-   ynh_hide_warnings ynh_exec_as_app NODE_ENV=production pnpm build
- popd
+ynh_setup_source --dest_dir="$install_dir" --keep=".env.local"
 
 #=================================================
 # ADD A CONFIGURATION
 #=================================================
-ynh_script_progression "Adding $app's configuration..."
+#ynh_script_progression "Adding $app's configuration..."
 
-ynh_config_add --template=".env.local.example" --destination="$install_dir/.env.local"
+#ynh_config_add --template=".env.local.example" --destination="$install_dir/.env.local"
 
 #=================================================
 # NGINX CONFIGURATION
@@ -58,6 +52,17 @@ ynh_config_add_nginx
 ynh_config_add_systemd
 
 yunohost service add $app --description="IMDb front-end" --log="/var/log/$app/$app.log"
+
+#=================================================
+# INSTALL LIBREMDB
+#=================================================
+ynh_script_progression "Building $app..."
+
+pushd $install_dir
+  ynh_hide_warnings npm install pnpm -g
+  ynh_hide_warnings ynh_exec_as_app pnpm install
+  ynh_hide_warnings ynh_exec_as_app NODE_ENV=production pnpm build
+popd
 
 #=================================================
 # START SYSTEMD SERVICE

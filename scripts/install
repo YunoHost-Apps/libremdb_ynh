@@ -4,6 +4,13 @@ source _common.sh
 source /usr/share/yunohost/helpers
 
 #=================================================
+# INITIALIZE AND STORE SETTINGS
+#=================================================
+
+redis_db=$(ynh_redis_get_free_db)
+ynh_app_setting_set --key=redis_db --value="$redis_db"
+
+#=================================================
 # INSTALL DEPENDENCIES
 #=================================================
 ynh_script_progression "Installing dependencies..."
@@ -19,21 +26,6 @@ ynh_script_progression "Setting up source files..."
 ynh_setup_source --dest_dir="$install_dir"
 
 #=================================================
-# NGINX CONFIGURATION
-#=================================================
-ynh_script_progression "Configuring NGINX web server..."
-
-# Create a dedicated NGINX config
-ynh_config_add_nginx
-
-#=================================================
-# CONFIGURE REDIS
-#=================================================
-
-redis_db=$(ynh_redis_get_free_db)
-ynh_app_setting_set --key=redis_db --value="$redis_db"
-
-#=================================================
 # ADD A CONFIGURATION
 #=================================================
 ynh_script_progression "Adding $app's configuration..."
@@ -41,26 +33,28 @@ ynh_script_progression "Adding $app's configuration..."
 ynh_config_add --template=".env.local.example" --destination="$install_dir/.env.local"
 
 #=================================================
-# INSTALL LIBREMDB
+# SYSTEM CONFIGURATION
 #=================================================
-ynh_script_progression "Building $app..."
+ynh_script_progression "Adding system configurations related to $app..."
 
-pushd $install_dir
-
-	ynh_hide_warnings npm install pnpm -g
-	ynh_hide_warnings ynh_exec_as_app pnpm install
-	ynh_hide_warnings ynh_exec_as_app NODE_ENV=production pnpm build
-popd
-
-#=================================================
-# SETUP SYSTEMD
-#=================================================
-ynh_script_progression "Configuring $app's systemd service..."
+# Create a dedicated NGINX config
+ynh_config_add_nginx
 
 # Create a dedicated systemd config
 ynh_config_add_systemd
 
 yunohost service add $app --description="IMDb front-end" --log="/var/log/$app/$app.log"
+
+#=================================================
+# INSTALL LIBREMDB
+#=================================================
+ynh_script_progression "Building $app..."
+
+pushd $install_dir
+	ynh_hide_warnings npm install pnpm -g
+	ynh_hide_warnings ynh_exec_as_app pnpm install
+	ynh_hide_warnings ynh_exec_as_app NODE_ENV=production pnpm build
+popd
 
 #=================================================
 # START SYSTEMD SERVICE
