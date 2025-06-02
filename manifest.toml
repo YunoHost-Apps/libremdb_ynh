@@ -5,7 +5,7 @@ name = "Libremdb"
 description.en = "Free & open source IMDb front-end"
 description.fr = "Frontal IMDb gratuit et open source"
 
-version = "4.1.0~ynh1"
+version = "4.2.0~ynh1"
 
 maintainers = []
 
@@ -36,8 +36,8 @@ ram.runtime = "50M"
 
 [resources]
         [resources.sources.main]
-        url = "https://github.com/zyachel/libremdb/archive/refs/tags/v4.1.0.tar.gz"
-        sha256 = "d17348d833bc866a7c4b894d208a8e2bb215341a03df6bc2f03653fa0cb17399"
+        url = "https://github.com/zyachel/libremdb/archive/refs/tags/v4.2.0.tar.gz"
+        sha256 = "669c4a4d78a50b9b1a314334225cdd9f74fd8cb6c462c1b424423b3ef3de3c44"
         autoupdate.strategy = "latest_github_tag"
 
     [resources.ports]
