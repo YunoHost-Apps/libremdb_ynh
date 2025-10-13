@@ -5,7 +5,7 @@ name = "Libremdb"
 description.en = "Free & open source IMDb front-end"
 description.fr = "Frontal IMDb gratuit et open source"
 
-version = "4.2.0~ynh1"
+version = "4.3.0~ynh1"
 
 maintainers = []
 
@@ -38,8 +38,8 @@ ram.runtime = "50M"
 
 [resources]
         [resources.sources.main]
-        url = "https://github.com/zyachel/libremdb/archive/refs/tags/v4.2.0.tar.gz"
-        sha256 = "669c4a4d78a50b9b1a314334225cdd9f74fd8cb6c462c1b424423b3ef3de3c44"
+        url = "https://github.com/zyachel/libremdb/archive/refs/tags/v4.3.0.tar.gz"
+        sha256 = "2e186bd699d15a92c621f06da580eab84c5a16620e36efbd19b430d1f671f4e2"
         autoupdate.strategy = "latest_github_tag"
 
     [resources.ports]
@@ -52,11 +52,7 @@ ram.runtime = "50M"
     main.url = "/"
 
     [resources.apt]
-    packages = "redis-server"
-
-    extras.yarn.repo = "deb https://dl.yarnpkg.com/debian/ stable main"
-    extras.yarn.key = "https://dl.yarnpkg.com/debian/pubkey.gpg"
-    extras.yarn.packages = "yarn"
+    packages = "redis-server, yarn"
 
     [resources.nodejs]
     version = "22"

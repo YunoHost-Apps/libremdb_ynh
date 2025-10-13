@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 source /usr/share/yunohost/helpers
 
 #=================================================
@@ -20,13 +19,6 @@ if [ -z "$redis_db" ]; then
 	redis_db=$(ynh_redis_get_free_db)
 	ynh_app_setting_set --key=redis_db --value="$redis_db"
 fi
-
-#=================================================
-# UPGRADE DEPENDENCIES
-#=================================================
-ynh_script_progression "Upgrading dependencies..."
-
-#REMOVEME? ynh_nodejs_install
 
 #=================================================
 # DOWNLOAD, CHECK AND UNPACK SOURCE
