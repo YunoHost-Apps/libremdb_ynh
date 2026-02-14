@@ -52,7 +52,7 @@ ram.runtime = "50M"
     main.url = "/"
 
     [resources.apt]
-    packages = "redis-server, yarn"
+    packages = "redis-server"
 
     [resources.nodejs]
     version = "22"
