@@ -51,9 +51,8 @@ yunohost service add $app --description="IMDb front-end" --log="/var/log/$app/$a
 ynh_script_progression "Building $app..."
 
 pushd $install_dir
-  ynh_hide_warnings npm install pnpm -g
-  ynh_hide_warnings ynh_exec_as_app pnpm install
-  ynh_hide_warnings ynh_exec_as_app NODE_ENV=production pnpm build
+	ynh_hide_warnings ynh_exec_as_app pnpm install
+	ynh_hide_warnings ynh_exec_as_app NODE_ENV=production pnpm build
 popd
 
 #=================================================

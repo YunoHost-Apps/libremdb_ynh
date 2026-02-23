@@ -9,7 +9,7 @@ Group=__APP__
 Environment="PATH=__PATH_WITH_NODEJS__"
 Environment="NODE_ENV=production"
 WorkingDirectory=__INSTALL_DIR__/
-ExecStart=/usr/bin/yarn start -p __PORT__
+ExecStart=__NODEJS_DIR__/pnpm start -p __PORT__
 Restart=on-failure
 RestartSec=5
 StartLimitInterval=60s

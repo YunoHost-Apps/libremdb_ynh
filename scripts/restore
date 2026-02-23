@@ -9,6 +9,10 @@ ynh_script_progression "Restoring the app main directory..."
 
 ynh_restore "$install_dir"
 
+npm install --global corepack@latest
+corepack enable pnpm
+corepack use pnpm@latest
+
 #=================================================
 # RESTORE THE NGINX CONFIGURATION
 #=================================================
