@@ -42,7 +42,7 @@ yunohost service add $app --description="IMDb front-end" --log="/var/log/$app/$a
 ynh_script_progression "Building $app..."
 npm install --global corepack@latest
 corepack enable pnpm
-corepack use pnpm@latest
+corepack use pnpm@latest-10
 
 pushd $install_dir
 	ynh_hide_warnings ynh_exec_as_app pnpm install
