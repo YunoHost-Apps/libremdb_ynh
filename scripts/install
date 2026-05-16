@@ -40,9 +40,8 @@ yunohost service add $app --description="IMDb front-end" --log="/var/log/$app/$a
 # INSTALL LIBREMDB
 #=================================================
 ynh_script_progression "Building $app..."
-npm install --global corepack@latest
-corepack enable pnpm
-corepack use pnpm@latest
+
+ynh_hide_warnings corepack enable && ynh_exec_as_app corepack prepare pnpm@latest-10 --activate
 
 pushd $install_dir
 	ynh_hide_warnings ynh_exec_as_app pnpm install
